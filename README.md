@@ -26,7 +26,7 @@ These repos are private because they are systems that run my life: searching for
 | What | Does | Stack |
 |---|---|---|
 | **Parent Coach** | AI coaching app for parents. Logs structured observations of parent-child interactions, surfaces behavioral patterns, and coaches the parent's behavior instead of diagnosing the child. Knows when to stop and hand off to a human professional. | Next.js, Supabase, Claude |
-| **Framework Visualizer** | Prioritization tool for product managers. Turns a table of ideas and measures into interactive scatter, bubble, and radar charts, including bipolar tradeoffs where no direction is the winner. Drag a dot to change the underlying value. | React 19, TypeScript, Recharts, Vite |
+| **Ballast** | Prioritization tool for product managers. Turns a table of ideas and measures into interactive scatter, bubble, and radar charts, including bipolar tradeoffs where no direction is the winner. Drag a dot to change the underlying value. | React 19, TypeScript, Recharts, Vite |
 | **career-os** | An operating system for a job search. 62 skills, 7 scheduled agent routines, a CRM web app, and feedback loops that learn which resume and mock-interview changes actually produce callbacks. | Node, Next.js, Supabase, Claude Code |
 | **Housing Finder** | Automated listings aggregator. Daily scan routines across a dozen sources that block scrapers, cross-source dedup into one row per property, alerting only on genuinely new inventory. | Python, Next.js, GitHub Actions |
 | **diary-learner** | Longitudinal reflection system. An evening prompt collects the day, a morning routine reflects it back and threads it against recent entries. Decisions logged here return at 7, 30, 90, 180, and 365 days. | Python, Claude Code, Gmail API |
