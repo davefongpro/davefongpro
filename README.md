@@ -33,7 +33,7 @@ Ballast is public — link above. Parent Coach keeps its source closed but has a
 | **[Ballast](https://ballast.nwtnlabs.com)** | Prioritization tool for product managers. Turns a table of ideas and measures into interactive scatter, bubble, and radar charts, including bipolar tradeoffs where no direction is the winner. Drag a dot to change the underlying value. | React 19, TypeScript, Recharts, Vite |
 | **career-os** | An operating system for a job search. 62 skills, 7 scheduled agent routines, a CRM web app, and feedback loops that learn which resume and mock-interview changes actually produce callbacks. | Node, Next.js, Supabase, Claude Code |
 | **Housing Finder** | Automated listings aggregator. Daily scan routines across a dozen sources that block scrapers, cross-source dedup into one row per property, alerting only on genuinely new inventory. | Python, Next.js, GitHub Actions |
-| **diary-learner** | Longitudinal reflection system. An evening prompt collects the day, a morning routine reflects it back and threads it against recent entries. Decisions logged here return at 7, 30, 90, 180, and 365 days. | Python, Claude Code, Gmail API |
+| **diary-learner** | Longitudinal reflection system, and the one I would hand to another PM first. Agents read my recorded meetings, my calendar, and my commits across six repos, then hand the day back to me as evidence at 5:15pm. Ten minutes of my own interpretation goes in. Next morning it returns as what I actually did, the thread across recent weeks, and what to focus on. Decisions logged in it come back at 7, 30, 90, 180, and 365 days. | Python, Next.js, Claude Code, Gmail and Calendar APIs |
 
 </details>
 
@@ -53,6 +53,29 @@ That is a delivery function with intake, planning, quality gates, and release ma
 </details>
 
 <details>
+<summary><b>🔁 A day in the loop</b> — what the agents carry, and what stays mine</summary>
+
+<br>
+
+The clearest answer I have to *what does an AI-native operator actually look like all day*. It is one loop, and the split down the middle of it is the entire point.
+
+**Overnight, the machine does the remembering.** A routine reads every call I recorded that it has not seen before. Real interviews get scored against a rubric and written up. Everything else gets read for the commitments **I** made out loud, which then land wherever that thing already lives: the CRM, the tracker, or a single ledger of things only a human can do. It never invents an item that was not said, never files someone else's promise as mine, and never contacts anyone.
+
+**At 4:50am it looks at the day ahead.** My calendar, the live pipeline, the prepped work, the networking queue. It composes at most three focus blocks and two habits, never more than three planned hours. Everything that did not make the cut stays in the system rather than in front of me. An attention budget is a product decision, and most personal-productivity tools quietly refuse to make it.
+
+**At 5:15pm it hands the day back to me as evidence.** Applications sent, pipeline movement, pull requests merged across every repo, themes recurring in recent entries. Then two questions. I am reacting to a record, not reconstructing a day from memory, which is why ten minutes is enough. If a source failed to load, the email says so in amber rather than rendering a quiet day and a broken pipeline identically.
+
+**Ten minutes of judgment goes in.** That is the only part no system can do for me: what the day meant, what I would do differently, what I decided and why. Skipping is free. No streaks, no nagging, and a slow day still has a true answer, because the question asks what moved rather than what I achieved.
+
+**Next morning it comes back to me interpreted.** Yesterday reflected back, the thread running across recent entries, one forward move. And, on its own schedule, a decision I made months ago, quoting what I said I expected at the time and asking how it actually went.
+
+**That last one is the reason the whole thing exists.** A judgment that worked out is not automatically a judgment that was correct. Storing my expectation *before* I know the answer is what stops hindsight from quietly rewriting it, and it is the difference between a system that makes me faster and one that makes me better.
+
+I am not looking to have my thinking done for me. I am looking to stop spending it on recall.
+
+</details>
+
+<details>
 <summary><b>🎯 What I am demonstrating</b> — evals, agent orchestration, guardrails, and honest measurement</summary>
 
 <br>
@@ -65,7 +88,7 @@ That is a delivery function with intake, planning, quality gates, and release ma
 
 **Outcomes, including the null result.** Extract structured features from an artifact, wait for the real-world result, then join the two. Which resume edits precede a screen. Which cover-letter openers precede silence. The honest version of this reports "no finding at this sample size" more often than it reports a win, and holding that line is what makes the wins worth acting on.
 
-**Decision quality is not outcome quality.** When I log a decision, the system stores what I expected to happen, in my own words, before I know the answer. Reviews come back months later and ask whether the call was sound given only what I knew at the time. A judgment that worked out is not automatically a judgment that was correct, and separating those two is most of what senior product judgment is.
+**Decision quality is not outcome quality.** When I log a decision, the system stores what I expected to happen, in my own words, before I know the answer. It comes back at 7, 30, 90, 180, and 365 days and asks whether the call was sound given only what I knew at the time. A judgment that worked out is not automatically a judgment that was correct, and separating those two is most of what senior product judgment is. I built the review schedule because I could not be trusted to run it myself, which is the honest reason to automate anything.
 
 </details>
 
